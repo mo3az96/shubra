@@ -2639,3 +2639,14 @@ html[dir=ltr] .nav-foot-link:focus {
     width: 100%;
   }
 }
+
+.reg-slider .product {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .reg-slider .product {
+    width: 220px;
+  }
+
+}
