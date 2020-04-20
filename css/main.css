@@ -463,8 +463,8 @@ html[dir=ltr] .bootstrap-select .dropdown-toggle .filter-option {
 }
 @media (max-width: 1200px) {
   .nav-li.xs-li {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
   }
   .nav-li.xs-li.log-li {
     display: block;
@@ -1543,6 +1543,11 @@ html[dir=ltr] .top-dropdown {
   transition: all 0.3s ease-in-out;
   margin-left: 23px;
 }
+@media (max-width: 767px) {
+  .user-anchor {
+    font-size: 20px;
+  }
+}
 html[dir=ltr] .user-anchor {
   margin-left: 0;
   margin-right: 23px;
@@ -2087,6 +2092,11 @@ html[dir=ltr] .nav-foot-link:hover, html[dir=ltr] .nav-foot-link:focus {
 }
 .social-link:last-of-type {
   margin: 0;
+}
+@media (max-width: 767px) {
+  .social-link {
+    font-size: 20px;
+  }
 }
 
 .last-footer {

@@ -217,6 +217,10 @@
     @include transition(all 0.3s ease-in-out);
     margin-left: 23px;
 
+    @include xs {
+        font-size: 20px;
+    }
+
     #{$ltr} & {
         margin-left: 0;
         margin-right: 23px;

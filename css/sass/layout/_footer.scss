@@ -106,6 +106,10 @@ footer {
     &:last-of-type {
         margin: 0;
     }
+
+    @include xs {
+        font-size: 20px;
+    }
 }
 
 .last-footer {
