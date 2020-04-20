@@ -931,7 +931,7 @@ html[dir=ltr] .sub-cats-ul .sub-cats-li:nth-of-type(n + 7) {
   content: "";
 }
 .mo-accordion.active:after {
-  content: "";
+  content: "";
 }
 @media (max-width: 767px) {
   .mo-accordion.nav-foot-header {
