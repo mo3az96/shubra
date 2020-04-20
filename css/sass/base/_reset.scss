@@ -1,6 +1,7 @@
 body {
     position: relative;
     font-family: tajwal;
+    text-transform: capitalize;
 
     &::-webkit-scrollbar {
         background-color: $back;

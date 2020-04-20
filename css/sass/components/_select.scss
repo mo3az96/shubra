@@ -25,7 +25,12 @@
 
                 #{$ltr} & {
                     right: auto;
-                    left: 0;
+                    left: 2px;
+
+                    @include md {
+                        right: auto;
+                        left: auto;
+                    }
                 }
             }
         }

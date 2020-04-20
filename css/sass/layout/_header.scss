@@ -1,7 +1,7 @@
 .top-bar-cont {
     background-color: $back;
     position: relative;
-    z-index: 99;
+    z-index: 999;
 
     @include md {
         position: static;
@@ -129,6 +129,11 @@
     visibility: hidden;
     opacity: 0;
 
+    #{$ltr} & {
+        right: auto;
+        left: 0;
+    }
+
     @include xs {
         right: 50%;
         transform: translateX(50%);
@@ -212,6 +217,11 @@
     @include transition(all 0.3s ease-in-out);
     margin-left: 23px;
 
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 23px;
+    }
+
     &.mo-menu-icon,
     &.mo-search-icon {
         display: none;
@@ -268,6 +278,11 @@
     color: #fff;
     position: relative;
     margin: 0;
+
+    #{$ltr} & {
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     &:hover,
     &:focus {

@@ -135,6 +135,12 @@
             transform: translateY(-50%);
             left: 17px;
             @include transition(all 0.3s ease-in-out);
+
+            #{$ltr} & {
+                left: auto;
+                right: 17px;
+                content: "\f0da";
+            }
         }
     }
 
@@ -165,6 +171,7 @@
     #{$ltr} & {
         right: auto;
         left: 100%;
+        transform: translateX(10px);
     }
 }
 
