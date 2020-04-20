@@ -1,0 +1,394 @@
+.top-bar-cont {
+    background-color: $back;
+    position: relative;
+    z-index: 99;
+
+    @include md {
+        position: static;
+    }
+}
+
+.top-bar {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: $text;
+
+    @include xs {
+        height: 25px;
+    }
+}
+
+.hint {
+    display: flex;
+    align-items: center;
+
+    i {
+        width: 19px;
+    }
+
+    @include xs {
+        display: none;
+    }
+}
+
+.country {
+    display: flex;
+
+    @include xs {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+
+.top-anchor {
+    font-size: 14px;
+    color: $text;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include transition(all 0.3s ease-in-out);
+
+    img {
+        margin-left: 7px;
+
+        #{$ltr} & {
+            margin-right: 7px;
+            margin-left: 0;
+        }
+    }
+
+    i {
+        width: 25px;
+    }
+
+    &:after {
+        content: "\f0d7";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 11px;
+        margin-right: 6px;
+
+        #{$ltr} & {
+            margin-right: 0;
+            margin-left: 6px;
+        }
+    }
+
+    &:hover {
+        color: $red;
+
+        &:after {
+            color: $red;
+        }
+    }
+
+}
+
+.lang {
+    margin-right: 26px;
+
+    #{$ltr} & {
+        margin-right: 0;
+        margin-left: 26px;
+    }
+}
+
+.lang,
+.currency {
+    position: relative;
+
+    &:hover {
+        .top-dropdown {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.top-dropdown {
+    position: absolute;
+    min-width: 120px;
+    width: 100%;
+    height: auto;
+    right: 0;
+    top: 30px;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    padding: 10px 10px 0;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    @include transition(all 0.3s ease-in-out);
+
+    visibility: hidden;
+    opacity: 0;
+
+    @include xs {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .top-anchor {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 8px;
+        margin-bottom: 6px;
+        color: $sec-nav;
+
+        &:hover {
+            color: $red;
+        }
+
+        &:last-of-type {
+            border: none;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+
+
+}
+
+.logo {
+    display: block;
+    width: 223px;
+
+    @include md {
+        width: auto;
+    }
+
+    img {
+        width: 212px;
+
+        @include xs {
+            width: 150px;
+        }
+    }
+}
+
+.header-cont {
+    background-color: #fff;
+    position: relative;
+    z-index: 99;
+    padding-bottom: 19px;
+
+    @include md {
+        position: static;
+        padding-bottom: 0;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.mo-user-nav {
+    display: flex;
+    align-items: center;
+    width: 223px;
+    justify-content: flex-end;
+
+    @include md {
+        width: auto;
+    }
+
+}
+
+.user-anchor {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    @include transition(all 0.3s ease-in-out);
+    margin-left: 23px;
+
+    &.mo-menu-icon,
+    &.mo-search-icon {
+        display: none;
+
+        @include md {
+            display: flex;
+        }
+    }
+}
+
+.mo-log-icon {
+    color: $text;
+
+    i {
+        width: 24px;
+    }
+
+    .mo-text {
+        color: $text;
+        display: block;
+        font-size: 16px;
+        @include transition(all 0.3s ease-in-out);
+
+        &:first-of-type {
+            &:after {
+                content: "/";
+                margin-left: 3px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            color: $header;
+
+            &:after {
+                color: $text;
+            }
+        }
+    }
+
+    @include md {
+        display: none;
+    }
+}
+
+
+
+.mo-cart-icon {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $blue;
+    color: #fff;
+    position: relative;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: $header;
+
+        .count {
+            animation: vibe 0.7s ease forwards;
+        }
+    }
+}
+
+.count {
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $header;
+    line-height: 18px;
+    color: #fff;
+    font-size: 12px;
+    font-family: med;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 34px;
+}
+
+.call {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: $text;
+
+    @include md {
+        display: none;
+    }
+
+    span {
+        margin: 0 8px;
+    }
+
+    i {
+        font-size: 18px;
+    }
+
+    a {
+        font-family: bold;
+        color: $text;
+        @include transition(all 0.3s ease-in-out);
+
+        &:hover,
+        &:focus {
+            color: $header;
+        }
+    }
+}
+
+.sec-nav-cont {
+    background-color: $back;
+    border-top: 1px solid $border;
+
+    @include md {
+        display: none;
+    }
+}
+
+.sec-nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.whats-link {
+    font-size: 16px;
+    color: $text;
+    display: flex;
+    align-items: center;
+    @include transition(all 0.3s ease-in-out);
+
+    i {
+        color: #fff;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0dc143;
+        border-radius: 50%;
+        margin: 0 7px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $header;
+    }
+}
+
+
+.mo-overlay {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.302;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+
+    @include xs {
+        opacity: 0.8;
+    }
+}

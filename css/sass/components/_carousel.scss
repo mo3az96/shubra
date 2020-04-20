@@ -1,0 +1,118 @@
+.owl-carousel {
+    .owl-item {
+        img {
+            width: auto;
+        }
+    }
+
+    .owl-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        .owl-dot {
+            background: rgba(#000, 0.3);
+            outline: none;
+            border: none;
+            width: 15px;
+            height: 5px;
+            cursor: pointer;
+            margin: 0 2.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: $red;
+
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: $red;
+            }
+        }
+    }
+}
+
+.main-slider {
+    position: relative;
+    margin-top: 10px;
+
+    .owl-dots {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+
+        @include sm {
+            bottom: 10px;
+        }
+
+        .owl-dot {
+            background: rgba(#000, 0.5);
+            outline: none;
+            border: none;
+            width: 15px;
+            height: 5px;
+            cursor: pointer;
+            margin: 0 2.5px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.active {
+                background: #fff;
+
+                pointer-events: none;
+            }
+
+            &:hover {
+                background: #fff;
+            }
+        }
+    }
+
+    .owl-nav {
+        width: 0;
+        height: 0;
+
+        @include sm {
+            display: none;
+        }
+
+        button[class^=owl-] {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            outline: none;
+            border: none;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: #000;
+            opacity: 0.4;
+            font-size: 14px;
+            @include transition(all 0.3s ease-in-out);
+
+            &.owl-next {
+                left: 0;
+            }
+
+            &.owl-prev {
+                right: 0;
+            }
+
+            &:hover {
+                color: $blue;
+                background-color: #fff;
+                opacity: 1;
+            }
+        }
+    }
+}
