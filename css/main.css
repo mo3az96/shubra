@@ -1350,7 +1350,7 @@ html[dir=ltr] .sub-cats-ul .sub-cats-li:nth-of-type(n + 7) {
 }
 @media (max-width: 767px) {
   .top-bar {
-    height: 25px;
+    height: 30px;
   }
 }
 
